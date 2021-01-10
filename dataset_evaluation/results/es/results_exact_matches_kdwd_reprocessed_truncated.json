@@ -1,0 +1,11 @@
+{
+    "num_one_exact_match": 30.94,
+    "num_greater_one_exact_match": 33.88,
+    "num_no_exact_match": 35.18,
+    "accuracy_cleared_of_exact": -0.3094,
+    "average_exact_matches": 8.16,
+    "unsuccessful": 0,
+    "successful": 0,
+    "counter": 121835453,
+    "accuracy": 0.0
+}

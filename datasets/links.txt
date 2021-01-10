@@ -1,0 +1,16 @@
+AIDA-YAGO http://resources.mpi-inf.mpg.de/yago-naga/aida/download/aida-yago2-dataset.zip only mapping to Wikidata
+Microposts2016 http://ceur-ws.org/Vol-1691/microposts2016_neel-challenge-report/microposts2016-neel_challenge_gs.zip only mapping to Wikidata
+ISTEX-1000 https://github.com/wetneb/opentapioca/blob/master/data/istex_test.ttl, https://github.com/wetneb/opentapioca/blob/master/data/istex_train.ttl
+RSS500 https://old.datahub.io/dataset/rss-500-nif-ner-corpus/datapackage.json https://github.com/wetneb/opentapioca/blob/master/data/RSS-500_wd.ttl only mapping to Wikidata
+Wiki-Disamb30/Wikidata-Disamb mapped to Wikidata, previously a Wikification dataset https://github.com/ContextScout/ned-graphs/tree/master/dataset
+LCQuAD 2.0 https://github.com/AskNowQA/LC-QuAD2.0/tree/master/dataset
+SimpleQuestions https://github.com/askplatypus/wikidata-simplequestions mapped from Freebase
+T-REx https://hadyelsahar.github.io/t-rex/ 
+TAC-2017 not found
+WebQSP https://www.microsoft.com/en-us/download/details.aspx?id=52763 mapped to Wikidata https://public.ukp.informatik.tu-darmstadt.de/coling2018-graph-neural-networks-question-answering/WebQSP_WD_v1.zip
+GraphQuestions mapped to Wikidata https://github.com/ysu1989/GraphQuestions https://github.com/UKPLab/starsem2018-entity-linking also for WebQSP 
+QALD-7-WIKI https://project-hobbit.eu/challenges/qald2017/qald2017-challenge-tasks/
+NYT2018 couldn't find it
+ReVerb38 coudln't find it for knowledge graph population
+Knowledge Net https://github.com/diffbot/knowledge-net/tree/master/dataset for knowledge graph population
+
