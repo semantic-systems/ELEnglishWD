@@ -1,0 +1,60 @@
+[
+  {
+    "name": "AIDA-YAGO",
+    "links": ["http://resources.mpi-inf.mpg.de/yago-naga/aida/download/aida-yago2-dataset.zip"]
+  },
+  {
+    "name": "Microposts2016",
+    "links": ["http://ceur-ws.org/Vol-1691/microposts2016_neel-challenge-report/microposts2016-neel_challenge_gs.zip"]
+  },
+  {
+    "name": "ISTEX-1000",
+    "links": ["https://github.com/wetneb/opentapioca/blob/master/data/istex_test.ttl", "https://github.com/wetneb/opentapioca/blob/master/data/istex_train.ttl"]
+  },
+  {
+    "name": "RSS500",
+    "links": ["https://old.datahub.io/dataset/rss-500-nif-ner-corpus/datapackage.json", "https://github.com/wetneb/opentapioca/blob/master/data/RSS-500_wd.ttl"]
+  },
+  {
+    "name": "Wiki-Disamb30",
+    "links": ["https://github.com/ContextScout/ned-graphs/blob/master/dataset/wikidata-disambig-dev.json",
+    "https://github.com/ContextScout/ned-graphs/blob/master/dataset/wikidata-disambig-test.json",
+    "https://github.com/ContextScout/ned-graphs/blob/master/dataset/wikidata-disambig-train.json"]
+  },
+  {
+    "name": "LCQuAD 2.0",
+    "links": ["https://github.com/AskNowQA/LC-QuAD2.0/blob/master/dataset/train.json", "https://github.com/AskNowQA/LC-QuAD2.0/blob/master/dataset/test.json"]
+  },
+  {
+    "name": "SimpleQuestions",
+    "links": [
+      "https://github.com/askplatypus/wikidata-simplequestions/blob/master/annotated_wd_data_test.txt",
+      "https://github.com/askplatypus/wikidata-simplequestions/blob/master/annotated_wd_data_test_answerable.txt",
+      "https://github.com/askplatypus/wikidata-simplequestions/blob/master/annotated_wd_data_train.txt",
+      "https://github.com/askplatypus/wikidata-simplequestions/blob/master/annotated_wd_data_train_answerable.txt",
+      "https://github.com/askplatypus/wikidata-simplequestions/blob/master/annotated_wd_data_valid.txt",
+      "https://github.com/askplatypus/wikidata-simplequestions/blob/master/annotated_wd_data_valid_answerable.txt"
+    ]
+  },
+  {
+    "name": "T-REx",
+    "links": ["https://hadyelsahar.github.io/t-rex"],
+    "download": false
+  },
+  {
+    "name": "WebQSP",
+    "links": ["https://public.ukp.informatik.tu-darmstadt.de/coling2018-graph-neural-networks-question-answering/WebQSP_WD_v1.zip"]
+  },
+  {
+    "name": "GraphQuestions",
+    "links": ["https://public.ukp.informatik.tu-darmstadt.de/starsem18-entity-linking/EntityLinkingForQADatasets.zip"]
+  },
+  {
+    "name": "QALD-7-WIKI",
+    "links": ["https://project-hobbit.eu/challenges/qald2017/qald2017-challenge-tasks"]
+  },
+  {
+    "name": "Knowledge Net",
+    "links": ["https://github.com/diffbot/knowledge-net/blob/master/dataset/train.json", "https://github.com/diffbot/knowledge-net/blob/master/dataset/test-no-facts.json"]
+  }
+]
