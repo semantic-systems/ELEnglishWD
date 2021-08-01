@@ -5,7 +5,8 @@ This repository contains all code used to generate the statistics and plots in t
 Additionally, the generated statistics and plots are available. 
 
 
-Also, the code does not necessarily run out of the box. Sometimes, small adjustments to the code have to be made.
+Also, the code does not necessarily run out of the box. Sometimes, small adjustments to the code have to be made like 
+setting a variable or adding a function call.
 In the following, all relevant scripts are shortly described and necessary adjustments pointed out.
 
 ## Installation
@@ -19,7 +20,8 @@ To generate the statistics again, one has to download the necessary datasets.
 The links to the datasets can be found in folder [datasets](datasets). 
 Both files [dataset_links.json](datasets/dataset_links.json) and [links.txt](datasets/links.txt)
 contain the links to all datasets which were found. 
-Additionally, the [download_datasets.py](datasets/download_datasets.py) script downloads all easily downloadable datasets.  
+Additionally, the [download_datasets.py](datasets/download_datasets.py) script downloads all easily downloadable datasets. 
+Note that some datasets still need to be downloaded manually. Those will be mentioned on execution.
 
 ### Running ES tests
 
@@ -76,7 +78,7 @@ The generated files can be reprocessed by executing  [reprocess_language_statist
 
 ### Existing results
 
-The existing results can be found in [results](kg_evaluation/results)
+The existing results can be found in [results](kg_evaluation/results).
 
 ## Other scripts
 
