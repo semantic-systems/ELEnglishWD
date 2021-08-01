@@ -20,7 +20,7 @@ es = Elasticsearch()
 
 
 def append_search_query(surface_form: str, queries: list, match=True):
-    queries.append({"index": "wikidataentityindex_english_1"})
+    queries.append({"index": "wikidata_entity_index_english"})
     if match:
         queries.append(
             {"query": {"match": {"label": {"query": surface_form,}}}, "size": 100}

@@ -8,19 +8,19 @@ from utilities.tools import split_uri_and_label
 
 def populate_properties_elasticsearch(bulk_size=1000):
     populate_elasticsearch(
-        bulk_size, "wikidatapropertyindex", "predicate_labels.nt"
+        bulk_size, "wikidata_property_index", "predicate_labels.nt"
     )
 
 
 def populate_entities_elasticsearch(bulk_size=1000):
     populate_elasticsearch(
-        bulk_size, "wikidataentityindex_english_1", "labels.nt", total=81065185
+        bulk_size, "wikidata_entity_index_english", "labels.nt", total=81065185
     )
 
 
 def populate_descriptions_elasticsearch(bulk_size=1000):
     populate_elasticsearch(
-        bulk_size, "wikidatadescriptionsindex_english", "description.nt", total=64626844
+        bulk_size, "wikidata_descriptions_index_english", "description.nt", total=64626844
     )
 
 

@@ -27,7 +27,8 @@ Note that some datasets still need to be downloaded manually. Those will be ment
 
 #### Setting up ES
 To repeat the ES-Index EL tests, one has to set up an ES instance. 
-To populate the ES index, one can execute the methods found in [populate_ES.py](utilities/populate_ES.py).
+To populate the ES index, one can execute the methods found in [populate_ES.py](utilities/populate_ES.py). 
+Most important is `populate_entities_elasticsearch`.
 But note that the different methods expect already filtered n-triple files, only containing statements on label information.
 The filtering is done by the methods in the [filer_labels.py](utilities/filter_labels.py) file. 
 The methods expect an existing Wikidata n-triples file.
@@ -38,7 +39,7 @@ via `python -m dataset_evaluation.scripts.es_el_tests`.
 The datasets have to be placed in the right folder as defined in [paths.py](dataset_evaluation/scripts/paths.py) via the 
 `datasets_path` variable.
 
-All generated results were reprocessed via [reprocess_es_results.py](dataset_evaluation/scripts/reprocess_es_results.py)
+All generated results can be reprocessed via [reprocess_es_results.py](dataset_evaluation/scripts/reprocess_es_results.py)
 to compute additional statistics.
 
 #### Existing results
