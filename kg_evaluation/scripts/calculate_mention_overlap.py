@@ -98,5 +98,5 @@ if __name__ == "__main__":
     )
     results = calculate_overlap(mention_dictionary, identifiers)
 
-    with open("../results/wikidata_results.json", "w") as f:
+    with open("../results/dbedia_results.json", "w") as f:
         json.dump(results, f, indent=4)

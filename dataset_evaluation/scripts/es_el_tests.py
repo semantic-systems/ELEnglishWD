@@ -61,7 +61,7 @@ def run_and_dump(
         except FileNotFoundError:
             raise RuntimeError(
                 "mention_dict.json has to be created first to use memory mode. \n"
-                "See calculate_mention_overlap_wikidata.py"
+                "See calculate_mention_overlap_plus_mention_dictionary.py"
             )
         label_dict = {}
         for key in list(content.keys()):

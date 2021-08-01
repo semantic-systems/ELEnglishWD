@@ -8,7 +8,7 @@ from utilities.tools import split_uri_and_label
 
 def populate_properties_elasticsearch(bulk_size=1000):
     populate_elasticsearch(
-        bulk_size, "wikidatapropertyindex", "./data/predicate_labels.nt"
+        bulk_size, "wikidatapropertyindex", "predicate_labels.nt"
     )
 
 

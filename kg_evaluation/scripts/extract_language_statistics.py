@@ -278,7 +278,7 @@ if __name__ == "__main__":
         "descriptions_per_entity": {},
     }
 
-    # Read through whole JSON entitiy by entity, filter and output to nt file
+    # Read through whole JSON entitiy by entity, filter and output to json file
     counter = 0
     with WikidataDumpReader("../data/latest-all.json.gz") as reader:
         for item in reader:
