@@ -20,8 +20,10 @@ To generate the statistics again, one has to download the necessary datasets.
 The links to the datasets can be found in folder [datasets](datasets). 
 Both files [dataset_links.json](datasets/dataset_links.json) and [links.txt](datasets/links.txt)
 contain the links to all datasets which were found. 
+
 Additionally, the [download_datasets.py](datasets/download_datasets.py) script downloads all easily downloadable datasets. 
 Note that some datasets still need to be downloaded manually. Those will be mentioned on execution.
+Run the script via `python -m download_datasets` inside the datasets folder. 
 
 ### Running ES tests
 

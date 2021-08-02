@@ -1,12 +1,12 @@
 import json
 import os
 import urllib.request
-from functools import partial
 from pathlib import Path
 import argparse
 from urllib.parse import urlparse
 
 from tqdm import tqdm
+import zipfile
 
 
 def download_with_progress_bar(link, target_dir):
@@ -35,11 +35,15 @@ def main(dataset_links_file: Path, target_dir: Path):
             dataset_path.mkdir(exist_ok=True)
             for link in dataset["links"]:
                 link_file_name = os.path.basename(urlparse(link).path)
-                download_with_progress_bar(link, dataset_path.joinpath(link_file_name))
+                full_download_path = dataset_path.joinpath(link_file_name)
+                download_with_progress_bar(link, full_download_path)
+
+                if link_file_name.endswith(".zip"):
+                    with zipfile.ZipFile(full_download_path, 'r') as zip_ref:
+                        zip_ref.extractall(dataset_path)
+
         except Exception as e:
             print(f"Something went wrong. Please try to download {dataset['name']} manually:\n{dataset['links']}")
-            raise e
-
 
 
 if __name__ == "__main__":
