@@ -1,4 +1,5 @@
 from tqdm import tqdm
+from argparse import ArgumentParser
 
 
 def filter_labels_no_loading(
@@ -56,3 +57,11 @@ def filter_labels_and_descriptions_no_loading(
                 output_descriptions_file.write(line)
         line = input_file.readline()
     pbar.close()
+
+
+if __name__ == "__main__":
+    parser = ArgumentParser()
+    parser.add_argument("filename", type=str)
+    args = parser.parse_args()
+
+    filter_labels_and_descriptions_no_loading(args.filename)

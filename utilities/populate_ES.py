@@ -4,23 +4,24 @@ from elasticsearch import helpers, Elasticsearch
 from tqdm import tqdm
 
 from utilities.tools import split_uri_and_label
+from argparse import ArgumentParser
 
 
-def populate_properties_elasticsearch(bulk_size=1000):
+def populate_properties_elasticsearch(bulk_size=1000,filename="predicate_labels.nt"):
     populate_elasticsearch(
-        bulk_size, "wikidata_property_index", "predicate_labels.nt"
+        bulk_size, "wikidata_property_index", filename
     )
 
 
-def populate_entities_elasticsearch(bulk_size=1000):
+def populate_entities_elasticsearch(bulk_size=1000, filename="labels.nt"):
     populate_elasticsearch(
-        bulk_size, "wikidata_entity_index_english", "labels.nt", total=81065185
+        bulk_size, "wikidata_entity_index_english", filename, total=81065185
     )
 
 
-def populate_descriptions_elasticsearch(bulk_size=1000):
+def populate_descriptions_elasticsearch(bulk_size=1000, filename="description.nt"):
     populate_elasticsearch(
-        bulk_size, "wikidata_descriptions_index_english", "description.nt", total=64626844
+        bulk_size, "wikidata_descriptions_index_english", filename, total=64626844
     )
 
 
@@ -72,3 +73,13 @@ def populate_elasticsearch(bulk_size, index_name, filename, total=8774):
             helpers.bulk(es, bulk)
 
     pbar.close()
+
+
+if __name__ == "__main__":
+    parser = ArgumentParser()
+    parser.add_argument("--filename", type=str, default="labels.nt")
+
+    args = parser.parse_args()
+
+    populate_entities_elasticsearch(bulk_size=1000, filename=args.filename)
+

@@ -30,10 +30,12 @@ Run the script via `python -m download_datasets` inside the datasets folder.
 #### Setting up ES
 To repeat the ES-Index EL tests, one has to set up an ES instance. 
 To populate the ES index, one can execute the methods found in [populate_ES.py](utilities/populate_ES.py). 
-Most important is `populate_entities_elasticsearch`.
-But note that the different methods expect already filtered n-triple files, only containing statements on label information.
-The filtering is done by the methods in the [filer_labels.py](utilities/filter_labels.py) file. 
-The methods expect an existing Wikidata n-triples file.
+Most important is `populate_entities_elasticsearch` which is run on default if `python -m utilities.populate_ES` is executed. 
+One has to provide a n-triples files containing only label statements about entities 
+(Default filename `labels.nt` but can be specified by `--filename`).  
+To get such pre-filtered n-triple files, the methods in the [filer_labels.py](utilities/filter_labels.py) file can be used. 
+The methods expect an existing Wikidata n-triples file and if run via `python -m utilities.filter_labels filename` creates 
+two files, `labels.nt` and `description.nt`.
 
 #### Running the tests
 After setting up the ES instance, the tests can be run by executing [es_el_tests.py](dataset_evaluation/scripts/es_el_tests.py)
