@@ -3,10 +3,12 @@ import json
 import shlex
 from pathlib import Path
 
+from argparse import ArgumentParser
 import tqdm
 
 
-# reads through all lines of an (compressed) n-triples file and gathers the surface forms in a dictionary with
+# reads through all lines of an (compressed) n-triples file containing only label information and
+# gathers the surface forms in a dictionary with
 # the number of entities in the values (assumption that an entity does not have two equal labels)
 def compute_mention_overlap(
     filename: str, output_file_name=None, lang=None, filtered_relations=None
@@ -87,16 +89,23 @@ if __name__ == "__main__":
                           "<http://www.w3.org/2004/02/skos/core#altLabel>",
                           "<http://schema.org/alternateName>"]
 
+    parser = ArgumentParser()
+    parser.add_argument("filename", type=str)
+    parser.add_argument("mention_dictionary_filename", type=str)
+    parser.add_argument("results_filename", type=str)
+    args = parser.parse_args()
+
     # Has to be replaced with the different KG dumps
-    filename = "../DBpedia/labels_lang=en.ttl"
+    # filename = "../DBpedia/labels_lang=en.ttl"
+    # output_file_name="dbpedia.json"
 
     mention_dictionary, identifiers = compute_mention_overlap(
-        filename,
-        output_file_name="dbpedia.json",
+        args.filename,
+        output_file_name=args.mention_dictionary_filename,
         lang="en",
         filtered_relations=filtered_relations,
     )
     results = calculate_overlap(mention_dictionary, identifiers)
 
-    with open("../results/dbedia_results.json", "w") as f:
+    with open(args.results_filename, "w") as f:
         json.dump(results, f, indent=4)
