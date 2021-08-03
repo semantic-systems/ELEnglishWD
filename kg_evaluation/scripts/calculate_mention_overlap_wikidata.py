@@ -5,7 +5,7 @@ from tqdm import tqdm
 from utilities.tools import split_uri_and_label
 
 
-# Behaves similar to calculate_mention_overlap.py
+# Behaves similar to calculate_mention_overlap.py but only works with a prefiltered Wikidata n-triples file
 def gather_ambiguous_mentions(filename="labels.nt", total=81065185, language=None):
 
     input_file = open(filename)
@@ -46,3 +46,7 @@ def gather_ambiguous_mentions(filename="labels.nt", total=81065185, language=Non
 
     with open("mention_dict.json", "w") as f:
         json.dump(mention_dict, f)
+
+
+if __name__ == "__main__":
+    gather_ambiguous_mentions()
