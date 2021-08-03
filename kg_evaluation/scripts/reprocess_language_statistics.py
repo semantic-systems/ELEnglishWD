@@ -1,6 +1,6 @@
 import json
 import copy
-
+from argparse import ArgumentParser
 
 def sort_dictionary(dict_: dict, by_key=False, reversed_=True):
     return {
@@ -125,12 +125,17 @@ def interpret(sub_content: dict):
     return sub_reprocessed
 
 
-reprocessed = {}
-with open("language_statistics.json") as f:
-    content = json.load(f)
-    reprocessed["items"] = interpret(content["items"])
+if __name__ == "__main__":
+    parser = ArgumentParser()
+    parser.add_argument("filename", type=str)
 
-    reprocessed["properties"] = interpret(content["properties"])
+    args = parser.parse_args()
+    reprocessed = {}
+    with open(args.filename) as f:
+        content = json.load(f)
+        reprocessed["items"] = interpret(content["items"])
 
-with open("language_statistics_reprocessed.json", "w") as f:
-    json.dump(reprocessed, f, indent=4)
+        reprocessed["properties"] = interpret(content["properties"])
+
+    with open("language_statistics_reprocessed.json", "w") as f:
+        json.dump(reprocessed, f, indent=4)

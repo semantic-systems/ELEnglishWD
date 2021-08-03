@@ -1,4 +1,4 @@
-import argparse
+from argparse import ArgumentParser
 import bz2
 import gzip
 import json
@@ -246,6 +246,11 @@ def fill_data(data, item):
 
 
 if __name__ == "__main__":
+    parser = ArgumentParser()
+    parser.add_argument("filename", type=str)
+
+    args = parser.parse_args()
+
     item_data = {
         "languages_labels": {},
         "languages_any_sf": {},
@@ -280,7 +285,7 @@ if __name__ == "__main__":
 
     # Read through whole JSON entitiy by entity, filter and output to json file
     counter = 0
-    with WikidataDumpReader("../data/latest-all.json.gz") as reader:
+    with WikidataDumpReader(args.filename) as reader:
         for item in reader:
             qid = item.get("id")
             if qid[0] == "Q":
