@@ -3,6 +3,8 @@ import statistics
 import scipy.stats as stats
 from tqdm import tqdm
 
+from argparse import ArgumentParser
+
 
 def evaluate_dump(length_list: list, filename):
     avg = statistics.mean(length_list)
@@ -26,7 +28,11 @@ def evaluate_dump(length_list: list, filename):
 
 if __name__ == "__main__":
 
-    mention_dict: dict = json.load(open("mention_dict.json"))
+    parser = ArgumentParser()
+    parser.add_argument("mention_dict_file", type=str)
+
+    args = parser.parse_args()
+    mention_dict: dict = json.load(open(args.mention_dict_file))
 
     lengths = []
     lengths_per_entity = []
