@@ -1,6 +1,7 @@
 import json
 import logging
 from tqdm import tqdm
+from argparse import ArgumentParser
 
 from utilities.tools import split_uri_and_label
 
@@ -49,4 +50,9 @@ def gather_ambiguous_mentions(filename="labels.nt", total=81065185, language=Non
 
 
 if __name__ == "__main__":
-    gather_ambiguous_mentions()
+
+    parser = ArgumentParser()
+    parser.add_argument("--filename", type=str, default="labels.nt")
+    args = parser.parse_args()
+
+    gather_ambiguous_mentions(args.filename)
