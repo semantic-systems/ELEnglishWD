@@ -5,8 +5,7 @@ from tqdm import tqdm
 from utilities.tools import split_uri_and_label
 
 
-# Behaves similar to calculate_mention_overlap.py, one can also use the other one
-# A difference is that the mention identifiers are put into the mention_dict
+# Behaves similar to calculate_mention_overlap.py
 def gather_ambiguous_mentions(filename="labels.nt", total=81065185, language=None):
 
     input_file = open(filename)
