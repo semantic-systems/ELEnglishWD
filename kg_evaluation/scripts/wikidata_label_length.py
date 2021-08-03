@@ -24,14 +24,16 @@ def evaluate_dump(length_list: list, filename):
         json.dump(length_list, f, indent=4)
 
 
-mention_dict: dict = json.load(open("mention_dict.json"))
+if __name__ == "__main__":
 
-lengths = []
-lengths_per_entity = []
-for mention, entities in tqdm(mention_dict.items()):
-    length = len(mention)
-    lengths.append(length)
-    lengths_per_entity += len(set(entities)) * [length]
+    mention_dict: dict = json.load(open("mention_dict.json"))
 
-evaluate_dump(lengths, "wikidata_label_lengths")
-evaluate_dump(lengths_per_entity, "wikidata_label_lengths_per_entity")
+    lengths = []
+    lengths_per_entity = []
+    for mention, entities in tqdm(mention_dict.items()):
+        length = len(mention)
+        lengths.append(length)
+        lengths_per_entity += len(set(entities)) * [length]
+
+    evaluate_dump(lengths, "wikidata_label_lengths")
+    evaluate_dump(lengths_per_entity, "wikidata_label_lengths_per_entity")

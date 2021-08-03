@@ -7,7 +7,7 @@ from argparse import ArgumentParser
 import tqdm
 
 
-# reads through all lines of an (compressed) n-triples file containing only label information and
+# reads through all lines of an (compressed) n-triples file and
 # gathers the surface forms in a dictionary with
 # the number of entities in the values (assumption that an entity does not have two equal labels)
 def compute_mention_overlap(

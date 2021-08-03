@@ -70,9 +70,11 @@ One has to download n-triples dumps of the different KGs (DBpedia and Wikidata) 
 ### Generating the results
 
 There exist multiple scripts to generate statistics. To calculate the mention overlap, [calculate_mention_overlap.py](kg_evaluation/scripts/calculate_mention_overlap.py) 
-and [calculate_mention_overlap_plus_mention_dictionary.py](kg_evaluation/scripts/calculate_mention_overlap_plus_mention_dictionary.py) can be used. 
-Both expect a n-triples file. The main difference is that `calculate_mention_overlap_plus_mention_dictionary.py` also creates a json file which
-is a dictionary, assigning the entities to the corresponding mention. This generated `mention_dict.json` is further used via the 
+and [calculate_mention_overlap_wikidata.py](kg_evaluation/scripts/calculate_mention_overlap_wikidata.py) can be used. 
+Both expect a n-triples file. The main difference is that `calculate_mention_overlap_wikidata.py` can only use a pre-filtered Wikidata dump containing labels. 
+The first is executed via `python -m kg_evaluation.scripts.calculate_mention_overlap {filename} {mention_dictionary_filename} {results_filename}`
+and the second via`python -m kg_evaluation.scripts.calculate_mention_overlap_wikidata {filename}`
+Both generate also a mention dictionary file which is in the case of Wikidata further used via the 
 [wikidata_label_length.py](kg_evaluation/scripts/wikidata_label_length.py) script. It calculates statistics like the average 
 mean, median or p-percentile mention length.
 
