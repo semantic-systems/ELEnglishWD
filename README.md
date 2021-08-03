@@ -42,7 +42,7 @@ is executed.
 One has to provide a n-triples files containing only label statements about entities 
 (Default filename `labels.nt` but can be specified by `--filename`). \
 To get such pre-filtered n-triple files, the methods in the [filer_labels.py](utilities/filter_labels.py) file can be used. 
-The methods expect an existing Wikidata n-triples file and if run via 
+The methods expect an existing compressed (gz) Wikidata n-triples file and if run via 
 ```
 python -m utilities.filter_labels {filename}
 ```
