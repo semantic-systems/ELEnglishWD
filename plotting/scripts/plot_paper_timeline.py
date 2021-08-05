@@ -8,7 +8,7 @@ figure = plt.figure(dpi=600)
 
 # Publishing years and number of scientific works considered in survey
 years = [2017, 2018, 2019, 2020]
-papers = [0, 3, 2, 11]
+papers = [0, 2, 2, 11]
 
 plt.bar(years, papers)
 
