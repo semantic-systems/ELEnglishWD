@@ -9,7 +9,7 @@
   },
   {
     "name": "ISTEX-1000",
-    "links": ["https://github.com/wetneb/opentapioca/blob/master/data/istex_test.ttl", "https://github.com/wetneb/opentapioca/blob/master/data/istex_train.ttl"]
+    "links": ["https://raw.githubusercontent.com/wetneb/opentapioca/master/data/istex_test.ttl", "https://raw.githubusercontent.com/wetneb/opentapioca/master/data/istex_train.ttl"]
   },
   {
     "name": "RSS500",
@@ -17,23 +17,23 @@
   },
   {
     "name": "Wiki-Disamb30",
-    "links": ["https://github.com/ContextScout/ned-graphs/blob/master/dataset/wikidata-disambig-dev.json",
-    "https://github.com/ContextScout/ned-graphs/blob/master/dataset/wikidata-disambig-test.json",
-    "https://github.com/ContextScout/ned-graphs/blob/master/dataset/wikidata-disambig-train.json"]
+    "links": ["https://raw.githubusercontent.com/ContextScout/ned-graphs/master/dataset/wikidata-disambig-dev.json",
+    "https://raw.githubusercontent.com/ContextScout/ned-graphs/master/dataset/wikidata-disambig-test.json",
+    "https://raw.githubusercontent.com/ContextScout/ned-graphs/master/dataset/wikidata-disambig-train.json"]
   },
   {
     "name": "LCQuAD 2.0",
-    "links": ["https://github.com/AskNowQA/LC-QuAD2.0/blob/master/dataset/train.json", "https://github.com/AskNowQA/LC-QuAD2.0/blob/master/dataset/test.json"]
+    "links": ["https://raw.githubusercontent.com/AskNowQA/LC-QuAD2.0/master/dataset/train.json", "https://raw.githubusercontent.com/AskNowQA/LC-QuAD2.0/master/dataset/test.json"]
   },
   {
     "name": "SimpleQuestions",
     "links": [
-      "https://github.com/askplatypus/wikidata-simplequestions/blob/master/annotated_wd_data_test.txt",
-      "https://github.com/askplatypus/wikidata-simplequestions/blob/master/annotated_wd_data_test_answerable.txt",
-      "https://github.com/askplatypus/wikidata-simplequestions/blob/master/annotated_wd_data_train.txt",
-      "https://github.com/askplatypus/wikidata-simplequestions/blob/master/annotated_wd_data_train_answerable.txt",
-      "https://github.com/askplatypus/wikidata-simplequestions/blob/master/annotated_wd_data_valid.txt",
-      "https://github.com/askplatypus/wikidata-simplequestions/blob/master/annotated_wd_data_valid_answerable.txt"
+      "https://raw.githubusercontent.com/askplatypus/wikidata-simplequestions/master/annotated_wd_data_test.txt",
+      "https://raw.githubusercontent.com/askplatypus/wikidata-simplequestions/master/annotated_wd_data_test_answerable.txt",
+      "https://raw.githubusercontent.com/askplatypus/wikidata-simplequestions/master/annotated_wd_data_train.txt",
+      "https://raw.githubusercontent.com/askplatypus/wikidata-simplequestions/master/annotated_wd_data_train_answerable.txt",
+      "https://raw.githubusercontent.com/askplatypus/wikidata-simplequestions/master/annotated_wd_data_valid.txt",
+      "https://raw.githubusercontent.com/askplatypus/wikidata-simplequestions/master/annotated_wd_data_valid_answerable.txt"
     ]
   },
   {
@@ -55,6 +55,6 @@
   },
   {
     "name": "Knowledge Net",
-    "links": ["https://github.com/diffbot/knowledge-net/blob/master/dataset/train.json", "https://github.com/diffbot/knowledge-net/blob/master/dataset/test-no-facts.json"]
+    "links": ["https://raw.githubusercontent.com/diffbot/knowledge-net/master/dataset/train.json", "https://raw.githubusercontent.com/diffbot/knowledge-net/master/dataset/test-no-facts.json"]
   }
 ]
