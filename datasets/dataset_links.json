@@ -56,5 +56,33 @@
   {
     "name": "Knowledge Net",
     "links": ["https://raw.githubusercontent.com/diffbot/knowledge-net/master/dataset/train.json", "https://raw.githubusercontent.com/diffbot/knowledge-net/master/dataset/test-no-facts.json"]
+  },
+  {
+    "name": "KORE50DYWC",
+    "links": ["http://people.aifb.kit.edu/mfa/datasets/kore50-lrec2020.zip"]
+  },
+  {
+    "name": "KDWD",
+    "links": ["https://www.kaggle.com/kenshoresearch/kensho-derived-wikimedia-data"],
+    "download": false
+  },
+  {
+    "name": "CLEF HIPE 2020",
+    "links": ["https://raw.githubusercontent.com/impresso/CLEF-HIPE-2020/master/data/training-v1.2/en/HIPE-data-v1.2-dev-en.tsv",
+      "https://raw.githubusercontent.com/impresso/CLEF-HIPE-2020/master/data/test-v1.3/en/HIPE-data-v1.3-test-en.tsv"]
+  },
+  {
+    "name": "Mewsli-9",
+    "links": ["https://github.com/google-research/google-research/tree/master/dense_representations_for_entity_retrieval/mel#get-mewsli-9-dataset"],
+    "download": false
+  },
+  {
+    "name": "TweekiGold",
+    "links": ["https://raw.githubusercontent.com/ucinlp/tweeki/main/data/Tweeki_gold/Tweeki_gold.jsonl"]
+  },
+  {
+    "name": "TweekiData",
+    "links": ["https://github.com/ucinlp/tweeki/tree/main/data/Tweeki_data"],
+    "download": false
   }
 ]

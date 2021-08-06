@@ -13,4 +13,9 @@ QALD-7-WIKI https://project-hobbit.eu/challenges/qald2017/qald2017-challenge-tas
 NYT2018 couldn't find it
 ReVerb38 coudln't find it for knowledge graph population
 Knowledge Net https://github.com/diffbot/knowledge-net/tree/master/dataset for knowledge graph population
+KORE50DYWC https://www.aifb.kit.edu/web/KORE_50%5EDYWC
+Kensho Derived Wikimedia Dataset https://www.kaggle.com/kenshoresearch/kensho-derived-wikimedia-data
+CLEF HIPE 2020 https://github.com/impresso/CLEF-HIPE-2020/tree/master/data
+Mewsli-9 https://metatext.io/datasets/mewsli-9-
+TweekiData/TweekiGold https://github.com/ucinlp/tweeki/tree/main/data
 
