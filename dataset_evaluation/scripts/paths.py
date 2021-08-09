@@ -1,2 +1,2 @@
-datasets_path = "./all_data/datasets"
+datasets_path = "./datasets"
 results_path = "./test"
