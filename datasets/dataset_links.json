@@ -13,7 +13,7 @@
   },
   {
     "name": "RSS500",
-    "links": ["https://old.datahub.io/dataset/rss-500-nif-ner-corpus/datapackage.json", "https://github.com/wetneb/opentapioca/blob/master/data/RSS-500_wd.ttl"]
+    "links": ["https://old.datahub.io/dataset/rss-500-nif-ner-corpus/datapackage.json", "https://raw.githubusercontent.com/wetneb/opentapioca/master/data/RSS-500_wd.ttl"]
   },
   {
     "name": "Wiki-Disamb30",
