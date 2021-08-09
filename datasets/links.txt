@@ -3,7 +3,7 @@ Microposts2016 http://ceur-ws.org/Vol-1691/microposts2016_neel-challenge-report/
 ISTEX-1000 https://github.com/wetneb/opentapioca/blob/master/data/istex_test.ttl, https://github.com/wetneb/opentapioca/blob/master/data/istex_train.ttl
 RSS500 https://old.datahub.io/dataset/rss-500-nif-ner-corpus/datapackage.json https://github.com/wetneb/opentapioca/blob/master/data/RSS-500_wd.ttl only mapping to Wikidata
 Wiki-Disamb30/Wikidata-Disamb mapped to Wikidata, previously a Wikification dataset https://github.com/ContextScout/ned-graphs/tree/master/dataset
-LCQuAD 2.0 https://github.com/AskNowQA/LC-QuAD2.0/tree/master/dataset
+LCQuAD 2.0 https://github.com/AskNowQA/LC-QuAD2.0/tree/master/dataset https://figshare.com/articles/dataset/LC-QuAD_2_0/7982858/1
 SimpleQuestions https://github.com/askplatypus/wikidata-simplequestions mapped from Freebase
 T-REx https://hadyelsahar.github.io/t-rex/ 
 TAC-2017 not found

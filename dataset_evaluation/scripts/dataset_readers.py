@@ -313,8 +313,12 @@ def load_lcquad_file(filename):
 def load_lcquad20(filename):
 
     re_rule = re.compile("wd:Q[0-9]+")
-    with open(filename) as f:
+
+    with open(filename + "train.json") as f:
         content = json.load(f)
+
+    with open(filename + "test.json") as f:
+        content += json.load(f)
     ids = []
     for item in content:
         ids += re_rule.findall(item["sparql_wikidata"])

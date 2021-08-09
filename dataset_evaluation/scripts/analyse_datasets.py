@@ -125,7 +125,7 @@ def analyze_kore50():
 
 def analyze_lcquad20():
     print("Analyze LCQUAD20")
-    ids, num_docs = load_lcquad20("./" + datasets_path + "/LCQuAD_2.0/lcquad_2_0.json")
+    ids, num_docs = load_lcquad20("./" + datasets_path + "/LCQuAD_2.0/")
 
     dump("results_lcquad2.0.json", ids, num_docs)
 
