@@ -70,7 +70,7 @@ def dump(filename, ids, additional_info=None):
 def analyze_knowledge_net():
     print("Analyze Knowledge Net")
     ids, num_docs = reduce(
-        load_knowledge_net_file("./" + datasets_path + "/Knowledge Net/train.json")
+        load_knowledge_net_file("./" + datasets_path + "/Knowledge_Net/train.json")
     )
     dump("results_knowledge_net_train.json", ids, num_docs)
 
@@ -81,28 +81,28 @@ def analyze_knowledge_net():
 def analyze_wikidata_disambig():
     print("Analyze Wikidata-Disamb")
     ids, num_docs = reduce(
-        load_wikidata_disamb("./" + datasets_path + "/wikidata-disambig-train.json")
+        load_wikidata_disamb("./" + datasets_path + "/Wiki-Disamb30/wikidata-disambig-train.json")
     )
     dump("results_wikidata_train.json", ids, num_docs)
 
     ids, num_docs = reduce(
-        load_wikidata_disamb("./" + datasets_path + "/wikidata-disambig-test.json")
+        load_wikidata_disamb("./" + datasets_path + "/Wiki-Disamb30/wikidata-disambig-test.json")
     )
     dump("results_wikidata_test.json", ids, num_docs)
 
     ids, num_docs = reduce(
-        load_wikidata_disamb("./" + datasets_path + "/wikidata-disambig-dev.json")
+        load_wikidata_disamb("./" + datasets_path + "/Wiki-Disamb30/wikidata-disambig-dev.json")
     )
     dump("results_wikidata_dev.json", ids, num_docs)
 
 
 def analyze_istex():
     print("Analyze ISTEX")
-    ids, num_docs = reduce(load_nif_file("./" + datasets_path + "/istex_train.ttl"))
+    ids, num_docs = reduce(load_nif_file("./" + datasets_path + "/ISTEX-1000/istex_train.ttl"))
 
     dump("results_istex_train.json", ids, num_docs)
 
-    ids, num_docs = reduce(load_nif_file("./" + datasets_path + "/istex_test.ttl"))
+    ids, num_docs = reduce(load_nif_file("./" + datasets_path + "/ISTEX-1000/istex_test.ttl"))
 
     dump("results_istex_test.json", ids, num_docs)
 
@@ -117,7 +117,7 @@ def analyze_trex():
 def analyze_kore50():
     print("Analyze Kore50")
     ids, num_docs = reduce(
-        load_nif_file("./" + datasets_path + "/kore50-lrec2020/KORE_50_Wikidata.ttl")
+        load_nif_file("./" + datasets_path + "/KORE50DYWC/KORE_50_Wikidata.ttl")
     )
 
     dump("results_kore50.json", ids, num_docs)
@@ -125,7 +125,7 @@ def analyze_kore50():
 
 def analyze_lcquad20():
     print("Analyze LCQUAD20")
-    ids, num_docs = load_lcquad20("./" + datasets_path + "/LCQUAD2.0/lcquad_2_0.json")
+    ids, num_docs = load_lcquad20("./" + datasets_path + "/LCQuAD_2.0/lcquad_2_0.json")
 
     dump("results_lcquad2.0.json", ids, num_docs)
 
@@ -148,12 +148,12 @@ def analyze_kdwd():
 def analyze_hipe():
     print("Analyze HIPE")
     ids, num_docs = reduce(
-        load_hipe("./" + datasets_path + "/hipe/HIPE-data-v1.2-dev-en.tsv")
+        load_hipe("./" + datasets_path + "/CLEF_HIPE_2020/HIPE-data-v1.2-dev-en.tsv")
     )
     dump("results_hipe_dev.json", ids, num_docs)
 
     ids, num_docs = reduce(
-        load_hipe("./" + datasets_path + "/hipe/HIPE-data-v1.3-test-en.tsv")
+        load_hipe("./" + datasets_path + "/CLEF_HIPE_2020/HIPE-data-v1.3-test-en.tsv")
     )
     ids = [item[1] for item in ids]
     dump("results_hipe_test.json", ids, num_docs)
@@ -190,3 +190,4 @@ analyze_trex()
 analyze_tweeki_data()
 analyze_mewsli()
 analyze_tweeki_gold()
+analyze_kdwd()

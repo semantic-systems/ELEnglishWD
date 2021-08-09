@@ -189,7 +189,7 @@ def reduce(data):
 def run_knowledge_net():
     print("Analyze Knowledge Net")
     ids = reduce(
-        load_knowledge_net_file("./" + datasets_path + "/Knowledge Net/train.json")
+        load_knowledge_net_file("./" + datasets_path + "/Knowledge_Net/train.json")
     )
     run_and_dump("results_es_knowledge_net_train.json", ids)
 
@@ -198,28 +198,28 @@ def run_wikidata_disambig():
     print("Analyze Wikidata-Disamb")
 
     ids = reduce(
-        load_wikidata_disamb("./" + datasets_path + "/wikidata-disambig-test.json")
+        load_wikidata_disamb("./" + datasets_path + "/Wiki-Disamb30/wikidata-disambig-test.json")
     )
     run_and_dump("results_es_wikidata_test.json", ids)
 
     ids = reduce(
-        load_wikidata_disamb("./" + datasets_path + "/wikidata-disambig-dev.json")
+        load_wikidata_disamb("./" + datasets_path + "/Wiki-Disamb30/wikidata-disambig-dev.json")
     )
     run_and_dump("results_es_wikidata_dev.json", ids)
 
     ids = reduce(
-        load_wikidata_disamb("./" + datasets_path + "/wikidata-disambig-train.json")
+        load_wikidata_disamb("./" + datasets_path + "/Wiki-Disamb30/wikidata-disambig-train.json")
     )
     run_and_dump("results_es_wikidata_train.json", ids)
 
 
 def run_istex():
     print("Analyze ISTEX")
-    ids = reduce(load_nif_file("./" + datasets_path + "/istex_train.ttl"))
+    ids = reduce(load_nif_file("./" + datasets_path + "/ISTEX-1000/istex_train.ttl"))
 
     run_and_dump("results_es_istex_train.json", ids)
 
-    ids = reduce(load_nif_file("./" + datasets_path + "/istex_test.ttl"))
+    ids = reduce(load_nif_file("./" + datasets_path + "/ISTEX-1000/istex_test.ttl"))
 
     run_and_dump("results_es_istex_test.json", ids)
 
@@ -227,7 +227,7 @@ def run_istex():
 def run_kore50():
     print("Analyze KORE50")
     ids = reduce(
-        load_nif_file("./" + datasets_path + "/kore50-lrec2020/KORE_50_Wikidata.ttl")
+        load_nif_file("./" + datasets_path + "/KORE50DYWC/KORE_50_Wikidata.ttl")
     )
 
     run_and_dump("results_es_kore50_new.json", ids)
@@ -249,9 +249,9 @@ def run_kdwd():
 
 def run_hipe():
     print("Analyze HIPE")
-    ids = reduce(load_hipe("./" + datasets_path + "/hipe/HIPE-data-v1.2-dev-en.tsv"))
+    ids = reduce(load_hipe("./" + datasets_path + "/CLEF_HIPE_2020/HIPE-data-v1.2-dev-en.tsv"))
     run_and_dump("results_es_hipe_dev.json", ids)
-    ids = reduce(load_hipe("./" + datasets_path + "/hipe/HIPE-data-v1.3-test-en.tsv"))
+    ids = reduce(load_hipe("./" + datasets_path + "/CLEF_HIPE_2020/HIPE-data-v1.3-test-en.tsv"))
     run_and_dump("results_es_hipe_test.json", ids)
 
 

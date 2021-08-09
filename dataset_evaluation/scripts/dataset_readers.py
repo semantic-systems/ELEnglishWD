@@ -42,7 +42,7 @@ def load_mewsli():
 
 def load_tweeki_gold():
     data = []
-    with open(datasets_path + "/tweeki-main/data/Tweeki_gold/Tweeki_gold.jsonl") as f:
+    with open(datasets_path + "/TweekiGold/Tweeki_gold.jsonl") as f:
         for line in f.readlines():
             data.append(json.loads(line))
     ids = []
@@ -61,7 +61,7 @@ def load_tweeki_gold():
 
 
 def load_tweeki_data():
-    path = Path(datasets_path + "/tweeki-main/data/Tweeki_data")
+    path = Path(datasets_path + "/TweekiData")
     csv_files = path.glob("*.csv")
     num_documents = 0
     num_emerging = 0
