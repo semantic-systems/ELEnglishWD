@@ -280,7 +280,6 @@ if __name__ == "__main__":
     run_knowledge_net()
     run_istex()
     run_mewsli()
-    run_wikidata_disambig()
     run_tweeki_data()
     run_trex()
     run_kdwd()
